@@ -1,0 +1,23 @@
+---
+title: "Lab6"
+author: "Jeremy Knox"
+date: "11/13/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+HP_aggression = read_csv("harry_potter_aggression_full.csv")
+aggression_per_mention = HP_aggression %>% 
+  select("Name", "agg.per.mention") %>% 
+  filter(Name == "Draco Malfoy" | Name == "Harry")
+
+```
+
+
+
+
